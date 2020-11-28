@@ -1,0 +1,49 @@
+# 1. Write a program which will find all such numbers which are divisible by 7 but are not a multiple of 5, between 2000 and 3200 (both included). The numbers obtained should be printed in a comma-separated sequence on a single line.
+
+""" This code also works but will leave us comma at the end of the result. So using the list
+for i in range(2000, 3200+1):
+  if i%7 == 0:
+    if i%5 == 0:
+      continue
+    print (i, end = ', ')"""
+
+
+#define a list
+m = []
+#using for loop and using +1 to include 3200 in the range
+for i in range(2000, 3200+1):
+  if i%7 == 0:
+    if i%5 == 0:
+      continue
+    m.append(i)
+
+for j in range(0, len(m)):
+  if(j<len(m)-1):
+    print (m[j], end = ', ')
+  else:
+    print (m[j])
+
+
+# 2. Write a Python program to accept the user's first and last name and then getting them printed in the the reverse order with a space between first name and last name.
+
+#Variable a to take input of user first name
+a = input ("Enter your first name:")
+#Variable a to take input of user last name
+b = input ("Enter your Last Name:")
+
+#Printing user first name and last name in reverse order with a space inbetween
+print (a[::-1] + ' ' + b[::-1])
+
+
+# 3. Write a Python program to find the volume of a sphere with diameter 12 cm.
+
+# Importing math library to use pi
+import math
+
+# Diameter is 2r
+# Variable a to take input of diameter of a sphere
+a = input("Enter diameter of a Sphere:")
+# formula V = (4/3)*pi*(r*r*r) #r cube
+v=(4/3)*math.pi*(int(a)/2)**3
+# Printing volume of the Sphere
+print("Volume of the Sphere is:" + str(v))
